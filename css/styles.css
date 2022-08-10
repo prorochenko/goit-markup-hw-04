@@ -4,6 +4,8 @@
 html {
   box-sizing: border-box;
 }
+
+/* For all elemets */
 *,
 *::before,
 *::after {
@@ -337,14 +339,10 @@ body {
 .portfolios {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 .portfolios .item {
   width: calc((100% - 60px) / 3); /*370px   calc((100% - 60px) / 3)*/
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-.portfolios .item:nth-child(3n) {
-  margin-right: 0;
 }
 
 .portfolios .item:nth-last-child(-n + 3) {
@@ -379,6 +377,7 @@ body {
 border-left: 1px solid #eeeeee;
 border-bottom: 1px solid #eeeeee;
 border-right: 1px solid #eeeeee;
+/* можно по идеи постаивть чисто бордер 1 и бордер топ 0  */
 }
 
 
