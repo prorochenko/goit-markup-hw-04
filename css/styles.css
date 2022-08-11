@@ -44,6 +44,7 @@ img {
   --primary-bg-color: #ffffff;
   --button-primary-text-color: #ffffff;
   --button-porfolio-usual: #f5f4fa;
+  --bg-image:rgba(47, 48, 58, 0.4);
 }
 
 body {
@@ -69,8 +70,16 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
+/* Шапка сайта */
+
+.flex {
+  display: flex;
+  align-items: center;
+}
 .logo {
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
@@ -78,11 +87,6 @@ body {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
 }
 
 .logosecondword {
@@ -153,8 +157,24 @@ body {
 
 /*  Hero */
 .hero {
-  background-color: #2f303a;
+
+
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-image: linear-gradient(
+    to right,
+    var(--bg-image), 
+    var(--bg-image)),
+    url("/images/herobgp/hero-bgi.jpg");
+
+    
+  min-height: 600px;
+  max-width: 1600px;
   text-align: center;
+
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -171,10 +191,10 @@ body {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
-}.button.primary.focus{
+}
+.button.primary.focus {
   margin-right: 0;
 }
-
 
 /* Sections */
 
@@ -199,7 +219,7 @@ body {
   overflow: hidden;
 }
 
-.section.feature{
+.section.feature {
   padding-top: 88px;
   padding-bottom: 0px;
 }
@@ -263,6 +283,9 @@ body {
 .team-list .cards {
   width: 270px;
   margin-right: 30px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .team-list .cards:nth-child(4n) {
   margin-right: 0px;
@@ -330,10 +353,9 @@ body {
   color: var(--accent-color);
 }
 
-.logofooter{
+.logofooter {
   margin-top: 60px;
 }
-
 
 /* Porfolio PAGE */
 .portfolios {
@@ -341,13 +363,15 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
+
 .portfolios .item {
-  width: calc((100% - 60px) / 3); /*370px   calc((100% - 60px) / 3)*/
+  flex-basis: calc((100% - 60px) / 3); /*370px   calc((100% - 60px) / 3)*/
 }
 
 .portfolios .item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
+
 .portfolio-title {
   color: var(--title-text-color);
   font-size: 18px;
@@ -372,14 +396,11 @@ body {
   padding-top: 20px;
 }
 
-
-.borderforporfolio{
-border-left: 1px solid #eeeeee;
-border-bottom: 1px solid #eeeeee;
-border-right: 1px solid #eeeeee;
-/* можно по идеи постаивть чисто бордер 1 и бордер топ 0  */
+.borderforporfolio {
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
-
 
 /* Buttons */
 .button {
@@ -444,10 +465,9 @@ border-right: 1px solid #eeeeee;
   justify-content: center;
 }
 
-.button{
+.button {
   margin-right: 8px;
 }
 .buttons .item:nth-last-child(5n) {
   margin-right: 0px;
 }
-
