@@ -45,6 +45,9 @@ img {
   --button-primary-text-color: #ffffff;
   --button-porfolio-usual: #f5f4fa;
   --bg-image:rgba(47, 48, 58, 0.4);
+  --bgc:#F5F4FA;
+  --fill-default-icon:#AFB1B8;
+  --fill-hiver-icon: #FFFFFF;
 }
 
 body {
@@ -112,6 +115,9 @@ body {
   margin-left: 50px;
 }
 
+
+
+
 .site-nav .link {
   display: block;
   padding-top: 32px;
@@ -155,11 +161,23 @@ body {
   margin-left: 50px;
 }
 
+.auth-nav .link{
+  display:flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.contacts-icon{
+  flex: display;
+  stroke: var(--primary-text-color);
+  fill:none;
+
+}
 /*  Hero */
 .hero {
 
-
-
+  background-color: var(--bg-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -168,11 +186,12 @@ body {
     to right,
     var(--bg-image), 
     var(--bg-image)),
-    url("/images/herobgp/hero-bgi.jpg");
+    url("../images/herobgp/hero-bgi.jpg");
 
-    
+  
   min-height: 600px;
-  max-width: 1600px;
+  /* секция сожмется, но(картинка) не больше чем оригинльый размер */
+  max-width: 1600px; 
   text-align: center;
 
   padding-top: 200px;
@@ -251,6 +270,32 @@ body {
   margin-bottom: 0;
 }
 
+.feature-list .item::before{
+  display: block;
+  content: "";
+height: 120px;
+
+background-size: 70px;
+background-repeat: no-repeat;
+background-position: center;
+background-color: var(--bgc);
+
+margin-bottom: 30px;
+}
+
+.icon-antenna::before{
+  background-image: url("../images/feature/antenna.svg");
+}
+.icon-clock::before{
+  background-image: url("../images/feature/clock.svg");
+}
+.icon-diagram::before{
+  background-image: url("../images/feature/diagram.svg");
+}
+.icon-astronaut::before{
+  background-image: url("../images/feature/astronaut.svg");
+}
+
 /* what we do */
 
 .doing {
@@ -292,7 +337,7 @@ body {
 }
 
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--bgc);
 }
 .team-list .cards {
   background-color: #ffffff;
@@ -315,9 +360,49 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   margin-top: 0;
 }
+
+.sociallinks{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-content: center;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.social-link.link{
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  outline: none;
+}
+
+.social-icon{
+  fill: var(--fill-default-icon);
+
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon{
+  fill: var(--fill-hiver-icon);
+}
+
+.social-link:hover,
+.social-link:focus{
+  background: var(--accent-color);
+}
+
+
+
 
 /* footer */
 .footer {
@@ -400,6 +485,21 @@ body {
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+
+
+/* Постійні клієнти  */
+.company.list{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 30px;
+}
+
+.company.list .item{
+  padding: 16px 32px 16px 32px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
 }
 
 /* Buttons */
