@@ -531,8 +531,13 @@ color: #FFFFFF;
   border-right: 1px solid #eeeeee;
 }
 
-.list.portfolios .item:hover,
-.list.portfolios .item:focus{
+
+.portfolios .link{
+  display: block;
+}
+
+.portfolios .link:hover,
+.portfolios .link:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
