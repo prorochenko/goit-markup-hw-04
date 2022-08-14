@@ -180,6 +180,7 @@ body {
   background-size: cover;
   background-position: center;
 
+
   background-image: linear-gradient(
     to right,
     var(--bg-image), 
@@ -187,6 +188,9 @@ body {
     url("../images/herobgp/hero-bgi.jpg");
 
   
+    margin-left: auto;
+    margin-right: auto;
+
   min-height: 600px;
   /* секция сожмется, но(картинка) не больше чем оригинльый размер */
   max-width: 1600px; 
@@ -268,30 +272,22 @@ body {
   margin-bottom: 0;
 }
 
-.feature-list .item::before{
-  display: block;
-  content: "";
-height: 120px;
+.feature-svg{
+  display: flex;
+justify-content: center;
+align-items: center;
 
-background-size: 70px;
-background-repeat: no-repeat;
-background-position: center;
+width: 270px;
+height: 120px;
 background-color: var(--bgc);
 
+border-radius: 4px;
 margin-bottom: 30px;
 }
 
-.icon-antenna::before{
-  background-image: url("../images/feature/antenna.svg");
-}
-.icon-clock::before{
-  background-image: url("../images/feature/clock.svg");
-}
-.icon-diagram::before{
-  background-image: url("../images/feature/diagram.svg");
-}
-.icon-astronaut::before{
-  background-image: url("../images/feature/astronaut.svg");
+.social-icon-feature{
+  width: 70px;
+  height: 70px;
 }
 
 /* what we do */
@@ -385,8 +381,8 @@ margin-bottom: 30px;
   outline: none;
 }
 
-.social-icon{
-  fill: var(--fill-default-icon);
+.sociallinks-item .social-icon{
+  fill: var(--fill-default-icon); 
 
 }
 .social-link:hover .social-icon,
@@ -444,8 +440,8 @@ color: #FFFFFF;
 
 .social-icon-footer{
   fill: var(--fill-hiver-icon);
-
 }
+
 .social-link-footer:hover .social-icon,
 .social-link-footer:focus .social-icon{
   fill: var(--fill-hiver-icon);
@@ -528,12 +524,17 @@ color: #FFFFFF;
   padding-top: 20px;
 }
 
+
 .borderforporfolio {
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
 }
 
+.list.portfolios .item:hover,
+.list.portfolios .item:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 /* Постійні клієнти  */
 .company.list{
@@ -582,6 +583,8 @@ gap: 30px;
 .button.focus:focus {
   background-color: var(--accent-color);
   color: var(--button-primary-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button.primary {
